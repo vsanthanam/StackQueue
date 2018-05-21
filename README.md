@@ -1,5 +1,9 @@
 # Stack + Queue
 
+[![language](https://img.shields.io/badge/language-Objective--C-blue.svg)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+[![license](https://img.shields.io/github/license/vsanthanam/StackQueue.svg)](https://en.wikipedia.org/wiki/MIT_License)
+[![documentation](https://code.vsanthanam.com/StackQueue/Documentation/badge.svg)](https://code.vsanthanam.com/VSAlert/Documentation/)
+
 ## Usage
 
 ### Stack
