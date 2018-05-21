@@ -1,0 +1,3310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Queue Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/Queue" class="dashAnchor"></a>
+    <a title="Queue Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">StackQueue Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vsanthanam/StackQueue"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">StackQueue Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Queue Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Queue.html">Queue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stack.html">Stack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Queue</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">Queue</span> <span class="o">&lt;</span><span class="n">__covariant</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n">NSSecureCoding</span><span class="p">,</span><span class="n">NSCopying</span><span class="p">,</span><span class="n">NSFastEnumeration</span><span class="o">&gt;</span> </code></pre>
+
+                </div>
+              </div>
+            <p>A FIFO Queue in Objective-C, backed by an NSArray</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Factory%20Methods"></a>
+                <a name="//apple_ref/objc/Section/Factory Methods" class="dashAnchor"></a>
+                <a href="#/Factory%20Methods">
+                  <h3 class="section-name">Factory Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(cm)queue"></a>
+                    <a name="//apple_ref/objc/Method/+queue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(cm)queue">+queue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an empty queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(cm)queueWithObject:"></a>
+                    <a name="//apple_ref/objc/Method/+queueWithObject:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(cm)queueWithObject:">+queueWithObject:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with a single object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">queueWithObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(cm)queueWithObjects:"></a>
+                    <a name="//apple_ref/objc/Method/+queueWithObjects:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(cm)queueWithObjects:">+queueWithObjects:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with a list of objects (requires nil termination)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">queueWithObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">firstObj</span><span class="p">,</span> <span class="p">...;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>firstObj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(cm)queueWithObjects:count:"></a>
+                    <a name="//apple_ref/objc/Method/+queueWithObjects:count:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(cm)queueWithObjects:count:">+queueWithObjects:count:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with a C array</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">queueWithObjects</span><span class="p">:(</span><span class="k">const</span> <span class="n">ObjectType</span> <span class="o">*</span><span class="p">)</span><span class="nv">objects</span>
+                                    <span class="nf">count</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">cnt</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objects</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The C array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cnt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The length of the C array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(cm)queueWithArray:"></a>
+                    <a name="//apple_ref/objc/Method/+queueWithArray:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(cm)queueWithArray:">+queueWithArray:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with an NSArray</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">queueWithArray</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NSArray</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/objc/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)initWithObject:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithObject:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)initWithObject:">-initWithObject:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with an object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)initWithObjects:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithObjects:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)initWithObjects:">-initWithObjects:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue with a list of objects (requires nil termination)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">firstObj</span><span class="p">,</span> <span class="p">...;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>firstObj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)initWithObjects:count:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithObjects:count:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)initWithObjects:count:">-initWithObjects:count:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a list of objects with a C array</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithObjects</span><span class="p">:(</span><span class="k">const</span> <span class="n">ObjectType</span> <span class="o">*</span><span class="p">)</span><span class="nv">objects</span>
+                                   <span class="nf">count</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">cnt</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objects</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The C array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cnt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The length of the C array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The stack</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)initWithArray:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithArray:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)initWithArray:">-initWithArray:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a stack with an NSArray</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithArray</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NSArray</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The stack</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enqueue,%20Peek,%20Dequeue"></a>
+                <a name="//apple_ref/objc/Section/Enqueue, Peek, Dequeue" class="dashAnchor"></a>
+                <a href="#/Enqueue,%20Peek,%20Dequeue">
+                  <h3 class="section-name">Enqueue, Peek, Dequeue</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)enqueue:"></a>
+                    <a name="//apple_ref/objc/Method/-enqueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)enqueue:">-enqueue:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enqueue an object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enqueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)enqueueObjects:"></a>
+                    <a name="//apple_ref/objc/Method/-enqueueObjects:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)enqueueObjects:">-enqueueObjects:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enqueue an array of objects</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enqueueObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">objects</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objects</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)peek"></a>
+                    <a name="//apple_ref/objc/Method/-peek" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)peek">-peek</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>View the item in the front of the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">ObjectType</span><span class="p">)</span><span class="n">peek</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item at the front of the queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)dequeue"></a>
+                    <a name="//apple_ref/objc/Method/-dequeue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)dequeue">-dequeue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dequeue an item from the front of the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">ObjectType</span><span class="p">)</span><span class="n">dequeue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Equality%20&amp;%20Content%20Checking"></a>
+                <a name="//apple_ref/objc/Section/Equality &amp; Content Checking" class="dashAnchor"></a>
+                <a href="#/Equality%20&amp;%20Content%20Checking">
+                  <h3 class="section-name">Equality &amp; Content Checking</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(py)count"></a>
+                    <a name="//apple_ref/objc/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(py)count">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of items in the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">count</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)isEqualToQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-isEqualToQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)isEqualToQueue:">-isEqualToQueue:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compare two queues for equality</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqualToQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other queue to compare</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES of the queues are equivelent, otherwise NO.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)containsObject:"></a>
+                    <a name="//apple_ref/objc/Method/-containsObject:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)containsObject:">-containsObject:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if a queue contains an object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">containsObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to search for in the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the queue contains the object, otherwise NO.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Get%20Objects"></a>
+                <a name="//apple_ref/objc/Section/Get Objects" class="dashAnchor"></a>
+                <a href="#/Get%20Objects">
+                  <h3 class="section-name">Get Objects</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)objectAtIndex:"></a>
+                    <a name="//apple_ref/objc/Method/-objectAtIndex:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)objectAtIndex:">-objectAtIndex:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the object in the queue at the given index</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nf">objectAtIndex</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">index</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item at the index</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)objectsAtIndexes:"></a>
+                    <a name="//apple_ref/objc/Method/-objectsAtIndexes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)objectsAtIndexes:">-objectsAtIndexes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the objects at the given indexes in the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The indexes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The items at the indexes</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)objectAtIndexedSubscript:"></a>
+                    <a name="//apple_ref/objc/Method/-objectAtIndexedSubscript:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)objectAtIndexedSubscript:">-objectAtIndexedSubscript:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the object at the given index of the queue, via subscript.</p>
+
+<p>@discussion You don&rsquo;t need to invoke this method explicitly. <code>myStack[3]</code> is compiled to <code>[myStack objectAtIndexedSubscript:3]</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nf">objectAtIndexedSubscript</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">idx</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item at the index</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Get%20Index%20Of%20Objects"></a>
+                <a name="//apple_ref/objc/Section/Get Index Of Objects" class="dashAnchor"></a>
+                <a href="#/Get%20Index%20Of%20Objects">
+                  <h3 class="section-name">Get Index Of Objects</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObject:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObject:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObject:">-indexOfObject:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of a given object</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if the queue contains duplicates, the index of the first one will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists, otherwise NSNotFound.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObject:inRange:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObject:inRange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObject:inRange:">-indexOfObject:inRange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of a given object, if it exists within a specific range</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if the queue contains duplicates within the specified range, the index of the first one will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span> <span class="nf">inRange</span><span class="p">:(</span><span class="n">NSRange</span><span class="p">)</span><span class="nv">range</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>range</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The range limit</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists within the given range, otherwise NSNotFound.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObjectIdenticalTo:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObjectIdenticalTo:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObjectIdenticalTo:">-indexOfObjectIdenticalTo:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of the object who responds YES when sent an -isEqual: message with a given object</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist that would respond YES to the -isEqual: message, the index of the first one will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObjectIdenticalTo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to send along with the -isEqual: message</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists, otherwise NSNotFound.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObjectIdenticalTo:inRange:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObjectIdenticalTo:inRange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObjectIdenticalTo:inRange:">-indexOfObjectIdenticalTo:inRange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of the object who responds YES when sent an -isEqual: message with a given object, if it exists within a specific range</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist that would respond YES to the -isEqual: message within the specified range, the index of the first one will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObjectIdenticalTo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span>
+                               <span class="nf">inRange</span><span class="p">:(</span><span class="n">NSRange</span><span class="p">)</span><span class="nv">range</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to send along with the -isEqual: message</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>range</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the object, if it exists, otherwise NSNotFound.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists within the given range, otherwise NSNotFound</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObjectPassingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObjectPassingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObjectPassingTest:">-indexOfObjectPassingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of the object who returns YES when a passed as a paramater to a testing block</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist that would pass the testing block, the index of the first one will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObjectPassingTest</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                      <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists, otherwise NSNotFound.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObjectWithOptions:passingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObjectWithOptions:passingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObjectWithOptions:passingTest:">-indexOfObjectWithOptions:passingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of the object who returns YES when passed as a paramater to a testing block, with control over enumeration.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist that would pass the testing block, the index of the first item to pass the test will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span>
+<span class="nf">indexOfObjectWithOptions</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+             <span class="nf">passingTest</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                                           <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options used to configure the enumeration of tests</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists, otherwise NSNotFound</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObjectAtIndexes:options:passingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObjectAtIndexes:options:passingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObjectAtIndexes:options:passingTest:">-indexOfObjectAtIndexes:options:passingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index of the object who returns YES when passed a paramater to a testing block, within a set of indexes</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist in the given index set that would pass the testing block, the index of the first item to pass the test will be used
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObjectAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">s</span>
+                             <span class="nf">options</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+                         <span class="nf">passingTest</span><span class="p">:</span>
+                             <span class="p">(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                                               <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The indexes to test</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The enumeration options to test objects within the index set</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the object, if it exists within the specified index set, otherwise NSNotFound</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexOfObject:inSortedRange:options:usingComparator:"></a>
+                    <a name="//apple_ref/objc/Method/-indexOfObject:inSortedRange:options:usingComparator:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexOfObject:inSortedRange:options:usingComparator:">-indexOfObject:inSortedRange:options:usingComparator:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index, within a specified range, of an object compared with elements in the array using a given NSComparator block.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    if multiple objects exist in the created sorted array, the index of the first item in the sorted arary will be used (in terms of the stack)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">obj</span>
+              <span class="nf">inSortedRange</span><span class="p">:(</span><span class="n">NSRange</span><span class="p">)</span><span class="nv">r</span>
+                    <span class="nf">options</span><span class="p">:(</span><span class="n">NSBinarySearchingOptions</span><span class="p">)</span><span class="nv">opts</span>
+            <span class="nf">usingComparator</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSComparator</span><span class="p">)</span><span class="nv">cmp</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>obj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>r</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The range</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The binary search options to apply over the given range</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cmp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The comparison block used to sort objects over the given range</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the index of the object (in terms of the stack), if it exists, otherwise NSNotFound</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Get%20Indexes%20Of%20Objects"></a>
+                <a name="//apple_ref/objc/Section/Get Indexes Of Objects" class="dashAnchor"></a>
+                <a href="#/Get%20Indexes%20Of%20Objects">
+                  <h3 class="section-name">Get Indexes Of Objects</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexesOfObjectsPassingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexesOfObjectsPassingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexesOfObjectsPassingTest:">-indexesOfObjectsPassingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the indexes of objects that would return YES when passed as a paramater to a testing block</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nf">indexesOfObjectsPassingTest</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                      <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index set contain the indexes of all passing objects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexesOfObjectsWithOptions:passingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexesOfObjectsWithOptions:passingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexesOfObjectsWithOptions:passingTest:">-indexesOfObjectsWithOptions:passingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the indexes of objects that would return YES when passed as a paramater to a testing block, with control over enumeration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">indexesOfObjectsWithOptions</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+                <span class="nf">passingTest</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                                              <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index set contain the indexes of all passing objects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)indexesOfObjectsAtIndexes:options:passingTest:"></a>
+                    <a name="//apple_ref/objc/Method/-indexesOfObjectsAtIndexes:options:passingTest:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)indexesOfObjectsAtIndexes:options:passingTest:">-indexesOfObjectsAtIndexes:options:passingTest:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the index objects within a given index set that would return YES when passed as a paramater to a testing block</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">indexesOfObjectsAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">s</span>
+                  <span class="nf">options</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+              <span class="nf">passingTest</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span>
+                                            <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The set of indexes to check</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options used to enumerate over objects within the given index set</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block used to test objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index set containing the indexes of all passing objects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Perform%20Selectors%20On%20Objects"></a>
+                <a name="//apple_ref/objc/Section/Perform Selectors On Objects" class="dashAnchor"></a>
+                <a href="#/Perform%20Selectors%20On%20Objects">
+                  <h3 class="section-name">Perform Selectors On Objects</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)makeObjectsPerformSelector:"></a>
+                    <a name="//apple_ref/objc/Method/-makeObjectsPerformSelector:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)makeObjectsPerformSelector:">-makeObjectsPerformSelector:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform a selector on every object in the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">makeObjectsPerformSelector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector to perform</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)makeObjectsPerformSelector:withObject:"></a>
+                    <a name="//apple_ref/objc/Method/-makeObjectsPerformSelector:withObject:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)makeObjectsPerformSelector:withObject:">-makeObjectsPerformSelector:withObject:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform a selector on every object in the queue, with a given object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">makeObjectsPerformSelector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span>
+                        <span class="nf">withObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">argument</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector to perform</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>argument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enumeration"></a>
+                <a name="//apple_ref/objc/Section/Enumeration" class="dashAnchor"></a>
+                <a href="#/Enumeration">
+                  <h3 class="section-name">Enumeration</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)enumerateObjectsUsingBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-enumerateObjectsUsingBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)enumerateObjectsUsingBlock:">-enumerateObjectsUsingBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enumerate over the contents of the queue with a block</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enumerateObjectsUsingBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute over each object in the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)enumerateObjectsWithOptions:usingBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-enumerateObjectsWithOptions:usingBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)enumerateObjectsWithOptions:usingBlock:">-enumerateObjectsWithOptions:usingBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enumerate over the contents of the queue with a block and enumneration control</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enumerateObjectsWithOptions</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+                         <span class="nf">usingBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                      <span class="n">NSUInteger</span><span class="p">,</span>
+                                                      <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options to control enumeration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute over each object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)enumerateObjectsAtIndexes:options:usingBlock:"></a>
+                    <a name="//apple_ref/objc/Method/-enumerateObjectsAtIndexes:options:usingBlock:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)enumerateObjectsAtIndexes:options:usingBlock:">-enumerateObjectsAtIndexes:options:usingBlock:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enumerate over the contents of the queue over a given set of indexes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enumerateObjectsAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">s</span>
+                          <span class="nf">options</span><span class="p">:(</span><span class="n">NSEnumerationOptions</span><span class="p">)</span><span class="nv">opts</span>
+                       <span class="nf">usingBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                    <span class="n">NSUInteger</span><span class="p">,</span>
+                                                    <span class="n">BOOL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The set of indexes to enumerate over</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options used to control enumeration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute over each object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)objectEnumerator"></a>
+                    <a name="//apple_ref/objc/Method/-objectEnumerator" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)objectEnumerator">-objectEnumerator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an NSEnumerator to enumerate over the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSEnumerator</span> <span class="o">*</span><span class="p">)</span><span class="n">objectEnumerator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The NSEnumerator object specific to this queue instance</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Deriving%20Queues"></a>
+                <a name="//apple_ref/objc/Section/Deriving Queues" class="dashAnchor"></a>
+                <a href="#/Deriving%20Queues">
+                  <h3 class="section-name">Deriving Queues</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)queueByEnqueueing:"></a>
+                    <a name="//apple_ref/objc/Method/-queueByEnqueueing:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)queueByEnqueueing:">-queueByEnqueueing:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by enqueing an object to this one</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">queueByEnqueueing</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ObjectType</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to enqueue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)queueByEnqueingObjects:"></a>
+                    <a name="//apple_ref/objc/Method/-queueByEnqueingObjects:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)queueByEnqueingObjects:">-queueByEnqueingObjects:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by enqueing objects to this one</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">queueByEnqueingObjects</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">objects</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objects</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The objects to enqueue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)queueByDequeueing"></a>
+                    <a name="//apple_ref/objc/Method/-queueByDequeueing" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)queueByDequeueing">-queueByDequeueing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by dequeing an object from this one</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">queueByDequeueing</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)filteredQueueUsingPredicate:"></a>
+                    <a name="//apple_ref/objc/Method/-filteredQueueUsingPredicate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)filteredQueueUsingPredicate:">-filteredQueueUsingPredicate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue by filtering out objects from this one using an NSPredicate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">filteredQueueUsingPredicate</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The predicate used to filter out objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)subQueueWithRange:"></a>
+                    <a name="//apple_ref/objc/Method/-subQueueWithRange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)subQueueWithRange:">-subQueueWithRange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a queue using a portion of this one</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">subQueueWithRange</span><span class="p">:(</span><span class="n">NSRange</span><span class="p">)</span><span class="nv">range</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>range</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The range of the queue to use</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sorting"></a>
+                <a name="//apple_ref/objc/Section/Sorting" class="dashAnchor"></a>
+                <a href="#/Sorting">
+                  <h3 class="section-name">Sorting</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(py)sortedQueueHint"></a>
+                    <a name="//apple_ref/objc/Property/sortedQueueHint" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(py)sortedQueueHint">sortedQueueHint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hint used for speeding up / optimizing sorting</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">sortedQueueHint</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueUsingFunction:context:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueUsingFunction:context:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueUsingFunction:context:">-sortedQueueUsingFunction:context:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this one using a comparison function</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">sortedQueueUsingFunction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSInteger</span> <span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                <span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                <span class="kt">void</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">comparator</span>
+                 <span class="n">context</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">context</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The function used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The context</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueUsingFunction:context:hint:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueUsingFunction:context:hint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueUsingFunction:context:hint:">-sortedQueueUsingFunction:context:hint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this one using a comparison function and a hint</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">sortedQueueUsingFunction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSInteger</span> <span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                <span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                <span class="kt">void</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">comparator</span>
+                 <span class="n">context</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">context</span>
+                    <span class="n">hint</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="n">hint</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The function used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The context</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The hint used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueUsingDescriptors:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueUsingDescriptors:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueUsingDescriptors:">-sortedQueueUsingDescriptors:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this one using an array of sort descriptors</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedQueueUsingDescriptors</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSSortDescriptor</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">sortDescriptors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sortDescriptors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sort descriptors used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueUsingSelector:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueUsingSelector:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueUsingSelector:">-sortedQueueUsingSelector:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this one using a selector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedQueueUsingSelector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SEL</span><span class="p">)</span><span class="nv">comparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueUsingComparator:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueUsingComparator:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueUsingComparator:">-sortedQueueUsingComparator:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this one using an NSComparator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedQueueUsingComparator</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSComparator</span><span class="p">)</span><span class="nv">cmptr</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cmptr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The comparator used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortedQueueWithOptions:usingComparator:"></a>
+                    <a name="//apple_ref/objc/Method/-sortedQueueWithOptions:usingComparator:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortedQueueWithOptions:usingComparator:">-sortedQueueWithOptions:usingComparator:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new queue by sorting this ons using an NSComparator, with NSSortOptions</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedQueueWithOptions</span><span class="p">:(</span><span class="n">NSSortOptions</span><span class="p">)</span><span class="nv">opts</span>
+                                      <span class="nf">usingComparator</span><span class="p">:</span>
+                                          <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSComparator</span><span class="p">)</span><span class="nv">cmptr</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cmptr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The comparator used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new queue</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)exchangeObjectAtIndex:withObjectAtIndex:"></a>
+                    <a name="//apple_ref/objc/Method/-exchangeObjectAtIndex:withObjectAtIndex:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)exchangeObjectAtIndex:withObjectAtIndex:">-exchangeObjectAtIndex:withObjectAtIndex:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exchange two objects in the stack by their indexes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">exchangeObjectAtIndex</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">idx1</span>
+            <span class="nf">withObjectAtIndex</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">idx2</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idx1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the first object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idx2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the second object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortUsingDescriptors:"></a>
+                    <a name="//apple_ref/objc/Method/-sortUsingDescriptors:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortUsingDescriptors:">-sortUsingDescriptors:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort this queue using an array of sort descriptors</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sortUsingDescriptors</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSSortDescriptor</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">sortDescriptors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sortDescriptors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array of sort descriptors used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortUsingComparator:"></a>
+                    <a name="//apple_ref/objc/Method/-sortUsingComparator:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortUsingComparator:">-sortUsingComparator:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort this queue using an NSComparator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sortUsingComparator</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSComparator</span><span class="p">)</span><span class="nv">cmptr</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cmptr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The comparator used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortWithOptions:usingComparator:"></a>
+                    <a name="//apple_ref/objc/Method/-sortWithOptions:usingComparator:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortWithOptions:usingComparator:">-sortWithOptions:usingComparator:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort this queue using an NSComparator, with NSSortOptions</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sortWithOptions</span><span class="p">:(</span><span class="n">NSSortOptions</span><span class="p">)</span><span class="nv">opts</span>
+        <span class="nf">usingComparator</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSComparator</span><span class="p">)</span><span class="nv">cmptr</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>opts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cmptr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The comparator used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortUsingFunction:context:"></a>
+                    <a name="//apple_ref/objc/Method/-sortUsingFunction:context:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortUsingFunction:context:">-sortUsingFunction:context:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort this queue using a function</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sortUsingFunction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSInteger</span> <span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                 <span class="n">ObjectType</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                                 <span class="kt">void</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">compare</span>
+                  <span class="n">context</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">context</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compare</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The function used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The context</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)sortUsingSelector:"></a>
+                    <a name="//apple_ref/objc/Method/-sortUsingSelector:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)sortUsingSelector:">-sortUsingSelector:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort this queue using a selector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sortUsingSelector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SEL</span><span class="p">)</span><span class="nv">aSelector</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aSelector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector used to sort the queue</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Working%20With%20Strings"></a>
+                <a name="//apple_ref/objc/Section/Working With Strings" class="dashAnchor"></a>
+                <a href="#/Working%20With%20Strings">
+                  <h3 class="section-name">Working With Strings</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)componentsJoinedByString:"></a>
+                    <a name="//apple_ref/objc/Method/-componentsJoinedByString:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)componentsJoinedByString:">-componentsJoinedByString:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a string out of components in the queue, separated by a string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">componentsJoinedByString</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">separator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>separator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The separator used to join strings in the stack</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The combined string</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Key-Value%20Observation"></a>
+                <a name="//apple_ref/objc/Section/Key-Value Observation" class="dashAnchor"></a>
+                <a href="#/Key-Value%20Observation">
+                  <h3 class="section-name">Key-Value Observation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)addObserver:toObjectsAtIndexes:forKeyPath:options:context:"></a>
+                    <a name="//apple_ref/objc/Method/-addObserver:toObjectsAtIndexes:forKeyPath:options:context:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)addObserver:toObjectsAtIndexes:forKeyPath:options:context:">-addObserver:toObjectsAtIndexes:forKeyPath:options:context:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add an observer to objects in the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addObserver</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">observer</span>
+    <span class="nf">toObjectsAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexes</span>
+            <span class="nf">forKeyPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">keyPath</span>
+               <span class="nf">options</span><span class="p">:(</span><span class="n">NSKeyValueObservingOptions</span><span class="p">)</span><span class="nv">options</span>
+               <span class="nf">context</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>observer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The observer to add</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The indexes in the queue to observe</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key path to observe</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The options to observe</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The context</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Queue(im)removeObserver:fromObjectsAtIndexes:forKeyPath:"></a>
+                    <a name="//apple_ref/objc/Method/-removeObserver:fromObjectsAtIndexes:forKeyPath:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Queue(im)removeObserver:fromObjectsAtIndexes:forKeyPath:">-removeObserver:fromObjectsAtIndexes:forKeyPath:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove an observer from objects in the queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeObserver</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">observer</span>
+    <span class="nf">fromObjectsAtIndexes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSIndexSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexes</span>
+              <span class="nf">forKeyPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">keyPath</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>observer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The observer to remove</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The indexes in the queeu to stop observing</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key path to stop observing</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.vsanthanam.com" target="_blank" rel="external">Varun</a>. All rights reserved. (Last updated: 2018-05-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

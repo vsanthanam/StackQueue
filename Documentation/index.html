@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StackQueue  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="StackQueue  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">StackQueue Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vsanthanam/StackQueue"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">StackQueue Reference</a>
+        <img id="carat" src="img/carat.png" />
+        StackQueue  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Queue.html">Queue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Stack.html">Stack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='stack-queue' class='heading'>Stack + Queue</h1>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='stack' class='heading'>Stack</h3>
+<pre class="highlight plaintext"><code>Stack *myStack = [[Stack alloc] init];              // []
+
+[myStack push:@"A"];                                // ["A"]
+[myStack push:@"B"];                                // ["A", "B"]
+
+[myStack pushObjects:@[@"C", @"D", @"E"]];          // ["A", "B", "C", "D", "E"]
+
+NSString *last = [myStack peek];                    // "E"
+
+[myStack pop];                                      // ["A", "B", "C", "D"]
+</code></pre>
+<h3 id='queue' class='heading'>Queue</h3>
+<pre class="highlight plaintext"><code>Queue *myQueue = [[Queue alloc] init];              // []
+
+[myStack enqueue:@"A"];                             // ["A"]
+[myStack enqueue:@"B"];                             // ["A", "B"]
+
+[myStack enqueueObjects:@[@"C", @"D", @"E"]];       // ["A", "B", "C", "D", "E"]
+
+NSString *first = [myStack peek];                   // "A"
+
+[myStack dequeue];                                  // ["B", "C", "D", "E"]
+</code></pre>
+<h2 id='features' class='heading'>Features</h2>
+<h3 id='objective-c-lightweight-generics' class='heading'>Objective-C Lightweight Generics</h3>
+<pre class="highlight plaintext"><code>Stack&lt;NSString *&gt; *myStack = [Stack&lt;NSString *&gt; stack];     // Generic String Stack
+
+[stack push:@"1"];                                          // OK
+[stack push:@1];                                            // NOT OK
+</code></pre>
+<h3 id='objective-c-fast-enumeration' class='heading'>Objective-C Fast Enumeration</h3>
+<pre class="highlight plaintext"><code>Queue&lt;NSNumber *&gt; *myQueue = [Queue queueWithObjects:@1, @2, @3, @4, nil];
+
+for (NSNumber *number in myQueue) {
+
+    // iterate
+
+}
+
+</code></pre>
+<h3 id='subscripting' class='heading'>Subscripting</h3>
+<pre class="highlight plaintext"><code>Stack&lt;NSString *&gt; *myStack = [Stack stackWithArray:@[@"A", @"B", @"C", @"D"]];
+
+NSString *first = myStack[0]                        // "A"
+NSString *second = myStack[1]                       // "B"
+
+</code></pre>
+<h3 id='equality-hashability-encodability' class='heading'>Equality, Hashability, Encodability</h3>
+<pre class="highlight plaintext"><code>Queue&lt;NSNumber *&gt; *myQueue = [Queue queueWithArray:@[@1, @2, @3, @4]];
+Queue&lt;NSNumber *&gt; *myQueue2 = [Queue queueWithArray:@[@1, @2, @3, @4]];
+
+[myQueue isEqualToQueue:myQueue2]                   // YES
+[myQueue2 isEqual:myQueue]                          // YES
+myQueue.hash == myQueue2.hash                       // YES
+
+NSData *myQueueData = [NSKeyedArchiver archivedDataWithRootObject:myQueue];
+Queue&lt;NSNumber *&gt; *myQueue3 = (Queue&lt;NSNumber *&gt; *)[NSKeyedUnarchiver unarchiveObjectWithData:myQueueData];
+
+[myQueue3 isEqual:myQueue]                          // YES
+</code></pre>
+<h3 id='mass-key-value-observation' class='heading'>Mass Key-Value Observation</h3>
+
+<p>You can observe every object in a stack or a queue using: 
+<code>-addObserver:toObjectsAtIndexes:forKeyPath:options:context:</code></p>
+
+<p>You can remove observers using: 
+<code>-removeObserver:fromObjectsAtIndexes:forKeyPath:</code></p>
+<h3 id='sorting-amp-filtering' class='heading'>Sorting &amp; Filtering</h3>
+
+<p>See the documentation for details on the various methods for deriving or mutating sorted / filtered stacks &amp; queues.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.vsanthanam.com" target="_blank" rel="external">Varun</a>. All rights reserved. (Last updated: 2018-05-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
