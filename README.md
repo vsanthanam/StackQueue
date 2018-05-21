@@ -88,3 +88,7 @@ You can remove observers using:
 
 ### Sorting & Filtering
 See the documentation for details on the various methods for deriving or mutating sorted / filtered stacks & queues.
+
+## Documentation
+
+Documentation is made with Jazzy, and is hosted on GitHub pages. You can find it [here](https://code.vsanthanam.com/StackQueue/Documentation)
