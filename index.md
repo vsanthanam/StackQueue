@@ -46,7 +46,7 @@ Queue<NSNumber *> *myQueue = [Queue queueWithObjects:@1, @2, @3, @4, nil];
 
 for (NSNumber *number in myQueue) {
 
-    // iterate
+// iterate
 
 }
 
@@ -84,3 +84,4 @@ You can remove observers using:
 
 ### Sorting & Filtering
 See the documentation for details on the various methods for deriving or mutating sorted / filtered stacks & queues.
+
