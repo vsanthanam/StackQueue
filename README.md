@@ -1,5 +1,11 @@
 # Stack + Queue
 
+[![language](https://img.shields.io/badge/language-Objective--C-blue.svg)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+[![license](https://img.shields.io/github/license/vsanthanam/StackQueue.svg)](https://en.wikipedia.org/wiki/MIT_License)
+[![documentation](https://code.vsanthanam.com/StackQueue/Documentation/badge.svg)](https://code.vsanthanam.com/VSAlert/Documentation/)
+
+I find myself building these classes all the time, so I decided to create them in a feature complete way once and for all. They're pretty simple, but they're designed to behave as similarly to foundation-level collections as possible.
+
 ## Usage
 
 ### Stack
@@ -46,7 +52,7 @@ Queue<NSNumber *> *myQueue = [Queue queueWithObjects:@1, @2, @3, @4, nil];
 
 for (NSNumber *number in myQueue) {
 
-// iterate
+    // iterate
 
 }
 
@@ -85,3 +91,6 @@ You can remove observers using:
 ### Sorting & Filtering
 See the documentation for details on the various methods for deriving or mutating sorted / filtered stacks & queues.
 
+## Documentation
+
+Documentation is made with Jazzy, and is hosted on GitHub pages. You can find it [here](https://code.vsanthanam.com/StackQueue/Documentation)
