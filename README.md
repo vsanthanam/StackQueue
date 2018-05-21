@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/github/license/vsanthanam/StackQueue.svg)](https://en.wikipedia.org/wiki/MIT_License)
 [![documentation](https://code.vsanthanam.com/StackQueue/Documentation/badge.svg)](https://code.vsanthanam.com/VSAlert/Documentation/)
 
+I find myself building these classes all the time, so I decided to create them in a feature complete way once and for all. They're pretty simple, but they're designed to behave as similarly to foundation-level collections as possible.
+
 ## Usage
 
 ### Stack
